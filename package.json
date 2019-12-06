@@ -1,6 +1,8 @@
 {
-  "name": "root",
+  "name": "ember-glue",
   "private": "true",
+  "description": "monorepo for ember-glue framework",
+  "repository": "https://github.com/gaurav0/ember-glue",
   "license": "MIT",
   "workspaces": [
     "packages/*"
