@@ -11,6 +11,6 @@ module.exports = {
 
     Setting `disableAnalytics` to true will prevent any data from being sent.
   */
-  "disableAnalytics": false,
-  "yarn": true
-}
+  disableAnalytics: false,
+  yarn: true
+};
