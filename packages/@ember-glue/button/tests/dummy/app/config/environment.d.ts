@@ -9,6 +9,7 @@ export default config;
  */
 declare const config: {
   environment: any;
+  APP: {},
   modulePrefix: string;
   podModulePrefix: string;
   locationType: string;
