@@ -1,0 +1,33 @@
+/* these should be overriden by your theme */
+:root {
+  --glue-primary-bg-color: white;
+  --glue-secondary-bg-color: lightgray;
+  --glue-primary-fg-color: black;
+  --glue-secondary-fg-color: darkgray;
+  --glue-primary-border-color: darkgray;
+  --glue-secondary-border-color: black;
+  --glue-primary-outline-color: lightgray;
+  --glue-primary-border-radius: 20px;
+  --glue-secondary-border-radius: 6px;
+  --glue-primary-border-width: 2px;
+  --glue-normal-font-size: 14px;
+  --glue-primary-padding: 12px 20px;
+  --glue-secondary-padding: 6px 10px;
+  --glue-primary-box-shadow: 1px 1px solid var(--glue-secondary-border-color);
+}
+
+.glue-button {
+  box-sizing: border-box;
+  background-color: var(--glue-secondary-bg-color);
+  border-color: var(--glue-primary-border-color);
+  color: var(--glue-primary-fg-color);
+  border-radius: var(--glue-secondary-border-radius);
+  border-width: var(--glue-primary-border-width);
+  font-size: var(--glue-normal-font-size);
+  padding: var(--glue-secondary-padding);
+  box-shadow: var(--glue-primary-box-shadow);
+}
+
+.glue-button:focus {
+  outline-color: var(--glue-primary-outline-color);
+}
