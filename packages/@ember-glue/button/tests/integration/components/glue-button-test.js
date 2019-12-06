@@ -14,7 +14,6 @@ module('Integration | Component | glue-button', function(hooks) {
 
     await render(hbs`<GlueButton title="My Title" @label="My Button" @handleClick={{action this.handleClick}} />`);
     await settled();
-    debugger;
     await click('.glue-button');
 
     assert.dom('.glue-button').containsText('My Button');
