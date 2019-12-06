@@ -1,24 +1,27 @@
 /* these should be overriden by your theme */
 :root {
   --glue-primary-bg-color: white;
-  --glue-secondary-bg-color: lightgray;
+  --glue-secondary-bg-color: #ddddee;
+  --glue-primary-gradient: linear-gradient(180deg, #f4f4ff 0%, #ccccdd 100%);
   --glue-primary-fg-color: black;
-  --glue-secondary-fg-color: darkgray;
-  --glue-primary-border-color: darkgray;
+  --glue-secondary-fg-color: #333333;
+  --glue-primary-border-color: #666666;
   --glue-secondary-border-color: black;
-  --glue-primary-outline-color: lightgray;
+  --glue-primary-outline-color: #eeeeee;
   --glue-primary-border-radius: 20px;
   --glue-secondary-border-radius: 6px;
   --glue-primary-border-width: 2px;
   --glue-normal-font-size: 14px;
   --glue-primary-padding: 12px 20px;
   --glue-secondary-padding: 6px 10px;
-  --glue-primary-box-shadow: 1px 1px solid var(--glue-secondary-border-color);
+  --glue-primary-box-shadow: 2px 3px 4px #999999;
+  --glue-primary-active-box-shadow: 2px 3px 4px inset #999999;
 }
 
 .glue-button {
   box-sizing: border-box;
   background-color: var(--glue-secondary-bg-color);
+  background: var(--glue-primary-gradient);
   border-color: var(--glue-primary-border-color);
   color: var(--glue-primary-fg-color);
   border-radius: var(--glue-secondary-border-radius);
@@ -30,4 +33,9 @@
 
 .glue-button:focus {
   outline-color: var(--glue-primary-outline-color);
+  outline-width: 2px;
+}
+
+.glue-button:active {
+  box-shadow: var(--glue-primary-active-box-shadow);
 }
