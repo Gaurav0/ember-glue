@@ -3,7 +3,6 @@
 
 Button component for ember-glue
 
-
 Compatibility
 ------------------------------------------------------------------------------
 
@@ -15,22 +14,19 @@ Compatibility
 Installation
 ------------------------------------------------------------------------------
 
-```
+```sh
 ember install @ember-glue/button
 ```
-
 
 Usage
 ------------------------------------------------------------------------------
 
 [Longer description of how to use the addon in apps.]
 
-
 Contributing
 ------------------------------------------------------------------------------
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
-
 
 License
 ------------------------------------------------------------------------------

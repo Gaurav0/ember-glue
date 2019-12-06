@@ -1,5 +1,4 @@
 # Monorepo for the Ember Glue library of ui components.
-___
 
 The Ember Glue Library's design goals:
 
