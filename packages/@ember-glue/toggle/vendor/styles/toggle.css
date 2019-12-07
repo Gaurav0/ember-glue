@@ -60,9 +60,6 @@
 
 .glue-toggle--checkbox:checked + .glue-toggle--switch {
   background-color: var(--glue-secondary-bg-color);
-}
-
-.glue-toggle--checkbox:checked + .glue-toggle--switch {
   box-shadow: 0 0 1px var(--glue-secondary-bg-color);
   border-radius: calc(--glue-toggle-is-round * 50%);
 }
@@ -70,4 +67,3 @@
 .glue-toggle--checkbox:checked + .glue-toggle--switch::before {
   transform: translateX(26px);
 }
-

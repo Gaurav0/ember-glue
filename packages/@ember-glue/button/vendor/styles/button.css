@@ -21,7 +21,7 @@
 .glue-button {
   box-sizing: border-box;
   background-color: var(--glue-secondary-bg-color);
-  background: var(--glue-primary-gradient);
+  background-color: var(--glue-primary-gradient);
   border-color: var(--glue-primary-border-color);
   color: var(--glue-primary-fg-color);
   border-radius: var(--glue-secondary-border-radius);

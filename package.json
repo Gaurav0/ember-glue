@@ -10,6 +10,7 @@
   "scripts": {
     "lint:hbs": "lerna run lint:hbs",
     "lint:js": "lerna run lint:js",
+    "lint:style": "lerna run lint:style",
     "lint:ts": "lerna run lint:ts",
     "test": "yarn workspaces run test"
   },
