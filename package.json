@@ -16,5 +16,8 @@
   },
   "devDependencies": {
     "lerna": "^3.19.0"
+  },
+  "resolutions": {
+    "clean-css": "4.2.1"
   }
 }
