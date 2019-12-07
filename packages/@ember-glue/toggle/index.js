@@ -6,6 +6,6 @@ module.exports = {
   included() {
     this._super.included.apply(this, arguments);
 
-    this.import('vendor/styles/base.css');
+    this.import('vendor/styles/toggle.css', { prepend: true });
   }
 };

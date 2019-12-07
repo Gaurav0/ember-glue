@@ -6,6 +6,6 @@ module.exports = {
   included() {
     this._super.included.apply(this, arguments);
 
-    this.import('vendor/styles/button.css', { prepend: true });
+    this.import('vendor/styles/blue.css', { prepend: false });
   }
 };
