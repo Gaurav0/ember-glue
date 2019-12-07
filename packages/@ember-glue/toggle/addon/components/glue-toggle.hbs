@@ -1,9 +1,9 @@
-<label class="glue-toggle" {{on "click" this.handleClick}} ...attributes>
+<label class="glue-toggle" ...attributes>
   {{#if hasBlock}}
     {{yield @label}}
   {{else}}
     {{@label}}
   {{/if}}
-  <input type="checkbox" class="glue-toggle--checkbox">
+  <input type="checkbox" class="glue-toggle--checkbox" {{on "click" this.handleClick}}>
   <span class="glue-toggle--switch"></span>
 </label>

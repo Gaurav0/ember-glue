@@ -11,7 +11,7 @@
     "lint:hbs": "lerna run lint:hbs",
     "lint:js": "lerna run lint:js",
     "lint:ts": "lerna run lint:ts",
-    "test": "lerna run test"
+    "test": "yarn workspaces run test"
   },
   "devDependencies": {
     "lerna": "^3.19.0"

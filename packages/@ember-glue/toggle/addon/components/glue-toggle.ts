@@ -11,9 +11,7 @@ export default class GlueToggle extends Component<Args> {
     super(owner, args);
   }
 
-  @action handleClick(ev: Event) {
-    ev.stopPropagation();
-    ev.cancelBubble = true;
+  @action handleClick() {
     this.toggleSwitch();
     if (typeof this.args.handleClick === 'function') {
       this.args.handleClick();
