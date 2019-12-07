@@ -54,14 +54,15 @@
   left: 4px;
   bottom: 4px;
   background-color: var(--glue-primary-bg-color);
-  border-radius: var(--glue-toggle-border-radius);
+  border-radius: calc(var(--glue-toggle-is-round) * 17px);
   transition: .4s;
 }
 
 .glue-toggle--checkbox:checked + .glue-toggle--switch {
   background-color: var(--glue-secondary-bg-color);
   box-shadow: 0 0 1px var(--glue-secondary-bg-color);
-  border-radius: calc(--glue-toggle-is-round * 50%);
+  border-width: var(--glue-primary-border-width);
+  border-color: var(--glue-secondary-border-color);
 }
 
 .glue-toggle--checkbox:checked + .glue-toggle--switch::before {

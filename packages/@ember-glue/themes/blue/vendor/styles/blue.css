@@ -16,7 +16,7 @@
   --glue-secondary-padding: 6px 10px;
   --glue-primary-box-shadow: 2px 3px 4px #9999ff;
   --glue-primary-active-box-shadow: 2px 3px 4px inset #9999ff;
-  --glue-toggle-is-round: 0;
+  --glue-toggle-is-round: 1;
   --glue-toggle-border-radius: calc((1 - var(--glue-toggle-is-round)) * var(--glue-secondary-border-radius));
 }
 
