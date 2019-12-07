@@ -5,8 +5,13 @@
   "repository": "https://github.com/gaurav0/ember-glue",
   "license": "MIT",
   "workspaces": [
-    "packages/*"
+    "packages/*/*"
   ],
+  "scripts": {
+    "lint:hbs": "lerna run lint:hbs",
+    "lint:js": "lerna run lint:js",
+    "lint:ts": "lerna run lint:ts"
+  },
   "devDependencies": {
     "lerna": "^3.19.0"
   }
