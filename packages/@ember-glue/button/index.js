@@ -7,5 +7,5 @@ module.exports = {
     this._super.included.apply(this, arguments);
 
     this.import('vendor/styles/base.css');
-  },
+  }
 };
