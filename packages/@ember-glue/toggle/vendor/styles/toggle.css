@@ -16,8 +16,10 @@
   --glue-secondary-padding: 6px 10px;
   --glue-primary-box-shadow: 2px 3px 4px #999999;
   --glue-primary-active-box-shadow: 2px 3px 4px inset #999999;
+
   --glue-toggle-is-round: 0;
-  --glue-toggle-border-radius: calc((1 - var(--glue-toggle-is-round)) * var(--glue-secondary-border-radius));
+  --glue-toggle-border-width: 0;
+  --glue-toggle-handle-border-width: 0;
 }
 
 .glue-toggle {
@@ -34,35 +36,43 @@
 .glue-toggle--switch {
   position: relative;
   display: inline-block;
+  box-sizing: border-box;
   cursor: pointer;
   vertical-align: top;
-  top: -8px;
+  top: -10px;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 60px;
-  height: 34px;
+  width: 64px;
+  height: 38px;
   background-color: var(--glue-secondary-bg-color);
-  border-radius: calc(var(--glue-toggle-is-round) * 34px + var(--glue-toggle-border-radius));
+  border-width: var(--glue-toggle-border-width);
+  border-color: var(--glue-secondary-border-color);
+  border-style: solid;
+  border-radius: calc(
+    (1 - var(--glue-toggle-is-round)) * var(--glue-secondary-border-radius) +
+    var(--glue-toggle-is-round) * 38px);
 }
 
 .glue-toggle--switch::before {
   position: absolute;
+  box-sizing: border-box;
   content: "";
   height: 26px;
   width: 26px;
-  left: 4px;
-  bottom: 4px;
+  left: 5px;
+  bottom: 5px;
   background-color: var(--glue-primary-bg-color);
-  border-radius: calc(var(--glue-toggle-is-round) * 17px);
+  border-width: var(--glue-toggle-handle-border-width);
+  border-color: var(--glue-secondary-border-color);
+  border-style: solid;
+  border-radius: calc(var(--glue-toggle-is-round) * 18px);
   transition: .4s;
 }
 
 .glue-toggle--checkbox:checked + .glue-toggle--switch {
   background-color: var(--glue-secondary-bg-color);
   box-shadow: 0 0 1px var(--glue-secondary-bg-color);
-  border-width: var(--glue-primary-border-width);
-  border-color: var(--glue-secondary-border-color);
 }
 
 .glue-toggle--checkbox:checked + .glue-toggle--switch::before {
