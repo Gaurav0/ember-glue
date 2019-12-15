@@ -7,12 +7,13 @@ interface Args {
 
 interface Args {}
 
-export default class GlueMenuTrigger extends Component<Args> {
+export default class GlueMenuItem extends Component<Args> {
   constructor(owner: unknown, args: Args) {
     super(owner, args);
   }
 
-  @action handleClick() {
+  @action
+  handleClick() {
     if (typeof this.args.handleClick === 'function') {
       this.args.handleClick();
     }
