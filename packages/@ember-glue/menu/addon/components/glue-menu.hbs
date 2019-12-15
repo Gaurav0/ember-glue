@@ -1,9 +1,6 @@
-<label class="glue-menu" ...attributes>
-  {{#if hasBlock}}
-    {{yield @label}}
-  {{else}}
-    {{@label}}
-  {{/if}}
-  <input type="checkbox" class="glue-menu--checkbox" {{on "click" this.handleClick}}>
-  <span class="glue-menu--switch"></span>
-</label>
+<div class="glue-menu" ...attributes>
+  {{yield (hash
+    trigger=(component "glue-menu-trigger" triggerClick=this.triggerClick)
+    item=(component "glue-menu-item")
+  )}}
+</div>

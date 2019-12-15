@@ -1,24 +1,16 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 
-interface Args {
-  handleClick?: Function
-}
+interface Args {}
 
 export default class GlueMenu extends Component<Args> {
+  open: boolean = false;
 
   constructor(owner: unknown, args: Args) {
     super(owner, args);
   }
 
-  @action handleClick() {
-    this.toggleSwitch();
-    if (typeof this.args.handleClick === 'function') {
-      this.args.handleClick();
-    }
+  @action triggerClick() {
+    this.open = !this.open;
   }
-
-  @action handleDrag() {}
-
-  toggleSwitch() {}
 }

@@ -1,0 +1,7 @@
+<button class="glue-menu--item" {{on "click" @handleClick}} ...attributes>
+  {{#if hasBlock}}
+    {{yield @label}}
+  {{else}}
+    {{@label}}
+  {{/if}}
+</button>
