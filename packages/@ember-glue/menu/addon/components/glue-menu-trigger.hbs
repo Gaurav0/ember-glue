@@ -1,7 +1,7 @@
-<button class="glue-menu--trigger" {{on "click" @triggerClick}} ...attributes>
+{{#component this.args.triggerComponent class="glue-menu--trigger"}}
   {{#if hasBlock}}
     {{yield @label}}
   {{else}}
     {{@label}}
   {{/if}}
-</button>
+{{/component}}

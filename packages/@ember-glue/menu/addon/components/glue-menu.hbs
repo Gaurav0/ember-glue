@@ -1,6 +1,8 @@
 <div class="glue-menu" ...attributes>
-  {{yield (hash
-    trigger=(component "glue-menu-trigger" triggerClick=this.triggerClick)
-    item=(component "glue-menu-item")
-  )}}
+  <BasicDropdown as |dd|>
+    {{yield (hash
+      trigger=(component "glue-menu-trigger" triggerComponent=dd.trigger)
+      content=(component "glue-menu-content" contentComponent=dd.content)
+    )}}
+  </BasicDropdown>
 </div>
