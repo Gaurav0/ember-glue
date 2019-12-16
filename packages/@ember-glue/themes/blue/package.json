@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@ember-glue/button": "0.0.0",
+    "@ember-glue/menu": "0.0.0",
     "@ember-glue/toggle": "0.0.0",
     "ember-cli-babel": "^7.11.1",
     "ember-cli-htmlbars": "^4.0.0"

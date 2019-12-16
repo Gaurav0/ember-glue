@@ -41,9 +41,19 @@
   background-color: var(--glue-secondary-bg-color);
   border-color: var(--glue-primary-border-color);
   color: var(--glue-primary-fg-color);
+  border-style: solid;
+  border-width: var(--glue-secondary-border-width);
   border-radius: var(--glue-secondary-border-radius);
-  border-width: var(--glue-primary-border-width);
   padding: var(--glue-secondary-padding);
+}
+
+.glue-menu--trigger:focus {
+  outline-color: var(--glue-primary-outline-color);
+  outline-width: 1px;
+}
+
+.glue-menu--trigger[aria-expanded=true] {
+  border-width: var(--glue-primary-border-width);
 }
 
 .glue-menu--content.ember-basic-dropdown-content {

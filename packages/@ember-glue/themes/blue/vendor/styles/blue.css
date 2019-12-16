@@ -5,13 +5,16 @@
   --glue-primary-gradient: linear-gradient(180deg, lightblue 0%, #9999ff 100%);
   --glue-primary-fg-color: black;
   --glue-secondary-fg-color: darkblue;
+  --glue-primary-hover-color: #c0c0ff;
   --glue-primary-border-color: #6666ff;
   --glue-secondary-border-color: darkblue;
   --glue-primary-outline-color: #eeeeff;
   --glue-primary-border-radius: 20px;
   --glue-secondary-border-radius: 6px;
   --glue-primary-border-width: 2px;
+  --glue-secondary-border-width: 1px;
   --glue-normal-font-size: 14px;
+  --glue-large-font-size: 16px;
   --glue-primary-padding: 12px 20px;
   --glue-secondary-padding: 6px 10px;
   --glue-primary-box-shadow: 2px 3px 4px #9999ff;
@@ -20,5 +23,7 @@
   --glue-toggle-is-round: 1;
   --glue-toggle-border-width: 1px;
   --glue-toggle-handle-border-width: 1px;
+
+  --glue-menu-dropdown-width: 200px;
 }
 

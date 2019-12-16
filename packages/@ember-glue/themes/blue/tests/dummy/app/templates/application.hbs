@@ -3,8 +3,21 @@
 <p>
   <GlueButton @label="My Button" />
 </p>
+
 <p>
   <GlueToggle @label="My Toggle" />
+</p>
+
+<p>
+  <GlueMenu as |menu|>
+    <menu.Trigger>Trigger</menu.Trigger>
+    <menu.Content as |mc|>
+      <mc.Item>Item 1</mc.Item>
+      <mc.Item>Item 2</mc.Item>
+      <mc.Item>Item 3</mc.Item>
+      <mc.Item>Item 4</mc.Item>
+    </menu.Content>
+  </GlueMenu>
 </p>
 
 {{outlet}}
