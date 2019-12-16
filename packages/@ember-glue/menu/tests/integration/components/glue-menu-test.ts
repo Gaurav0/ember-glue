@@ -32,4 +32,31 @@ module('Integration | Component | glue-menu', function(hooks) {
     assert.dom('.glue-menu--content').isVisible;
     assert.dom('.glue-menu--content').containsText('My Content');
   });
+
+  test('Upon clicking an item, it closes', async function(assert) {
+    await render(hbs`
+      <GlueMenu title="My Title" as |menu|>
+        My Menu
+        <menu.Trigger>My Trigger</menu.Trigger>
+        <menu.Content @renderInPlace={{true}} as |mc|>
+          <mc.Item>Item 1</mc.Item>
+        </menu.Content>
+      </GlueMenu>
+    `);
+
+    assert.dom('.glue-menu').containsText('My Menu');
+    assert.dom('.glue-menu--trigger').containsText('My Trigger');
+    assert.dom('.glue-menu--content').isNotVisible;
+
+    await click ('.glue-menu--trigger');
+
+    assert.dom('.glue-menu').containsText('My Menu');
+    assert.dom('.glue-menu--trigger').containsText('My Trigger');
+    assert.dom('.glue-menu--content').isVisible;
+    assert.dom('.glue-menu--item').containsText('Item 1');
+
+    await click ('.glue-menu--item');
+
+    assert.dom('.glue-menu--content').isNotVisible;
+  });
 });

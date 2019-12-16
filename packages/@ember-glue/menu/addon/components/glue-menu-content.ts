@@ -1,7 +1,10 @@
 import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { Dropdown } from 'ember-basic-dropdown/addon/components/basic-dropdown';
 
 interface Args {
   renderInPlace?: boolean;
+  dropdown: Dropdown;
 }
 
 export default class GlueMenuTrigger extends Component<Args> {
@@ -11,5 +14,10 @@ export default class GlueMenuTrigger extends Component<Args> {
 
   get renderInPlace() {
     return this.args.renderInPlace || false;
+  }
+
+  @action
+  close() {
+    this.args.dropdown.actions.close();
   }
 }

@@ -51,7 +51,6 @@
   box-sizing: border-box;
   width: var(--glue-menu-dropdown-width);
   background-color: var(--glue-secondary-bg-color);
-  border-color: var(--glue-primary-border-color);
   color: var(--glue-primary-fg-color);
   border-width: var(--glue-primary-border-width);
   border-color: var(--glue-primary-border-color);

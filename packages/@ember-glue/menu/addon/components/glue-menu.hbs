@@ -1,8 +1,8 @@
 <div class="glue-menu" ...attributes>
-  <BasicDropdown as |dd|>
+  <BasicDropdown @onOpen={{this.onOpen}} as |dd|>
     {{yield (hash
-      Trigger=(component "glue-menu-trigger" triggerComponent=dd.Trigger)
-      Content=(component "glue-menu-content" contentComponent=dd.Content)
+      Trigger=(component "glue-menu-trigger" triggerComponent=dd.Trigger dropdown=this.dropdown)
+      Content=(component "glue-menu-content" contentComponent=dd.Content dropdown=this.dropdown)
     )}}
   </BasicDropdown>
 </div>

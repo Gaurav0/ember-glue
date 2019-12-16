@@ -4,7 +4,7 @@ import { render, click } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { TestContext } from 'ember-test-helpers';
 
-type Context = TestContext & { handleClick: () => void };
+type Context = TestContext & { handleClick: () => void; close: () => void; };
 
 module('Integration | Component | glue-menu-item', function(hooks) {
   setupRenderingTest(hooks);
@@ -14,8 +14,16 @@ module('Integration | Component | glue-menu-item', function(hooks) {
     this.handleClick = () => {
       clickCalled++;
     };
+    this.close = () => {};
 
-    await render(hbs`<GlueMenuItem title="My Title" @label="Some Text" @handleClick={{action this.handleClick}} />`);
+    await render(hbs`
+      <GlueMenuItem
+        title="My Title"
+        @label="Some Text"
+        @handleClick={{action this.handleClick}}
+        @close={{action this.close}}
+      />
+    `);
 
     await click('.glue-menu--item');
 
@@ -29,8 +37,17 @@ module('Integration | Component | glue-menu-item', function(hooks) {
     this.handleClick = () => {
       clickCalled++;
     };
+    this.close = () => {};
 
-    await render(hbs`<GlueMenuItem title="My Title" @handleClick={{action this.handleClick}}>Some Text</GlueMenuItem>`);
+    await render(hbs`
+      <GlueMenuItem
+        title="My Title"
+        @handleClick={{action this.handleClick}}
+        @close={{action this.close}}
+      >
+        Some Text
+      </GlueMenuItem>
+    `);
 
     await click('.glue-menu--item');
 
