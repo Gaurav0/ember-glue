@@ -1,7 +1,9 @@
-{{#component this.triggerComponent class="glue-menu--trigger"}}
-  {{#if hasBlock}}
-    {{yield @label}}
-  {{else}}
-    {{@label}}
-  {{/if}}
-{{/component}}
+{{#let (component this.args.triggerComponent) as |Trigger|}}
+  <Trigger class="glue-menu--trigger" ...attributes>
+    {{#if hasBlock}}
+      {{yield @label}}
+    {{else}}
+      {{@label}}
+    {{/if}}
+  </Trigger>
+{{/let}}
