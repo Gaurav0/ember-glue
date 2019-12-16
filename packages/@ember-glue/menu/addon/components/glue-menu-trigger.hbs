@@ -1,5 +1,5 @@
 {{#let (component this.args.triggerComponent) as |Trigger|}}
-  <Trigger class="glue-menu--trigger" ...attributes>
+  <Trigger @htmlTag="button" class="glue-menu--trigger" ...attributes>
     {{#if hasBlock}}
       {{yield @label}}
     {{else}}

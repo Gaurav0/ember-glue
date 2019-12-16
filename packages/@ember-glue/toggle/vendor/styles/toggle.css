@@ -23,7 +23,7 @@
 }
 
 .glue-toggle {
-  font-size: var(--glueprimary-font-size);
+  font-size: var(--glue-normal-font-size);
   vertical-align: baseline;
 }
 
