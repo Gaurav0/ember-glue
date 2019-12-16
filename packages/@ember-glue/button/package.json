@@ -17,6 +17,7 @@
     "build": "ember build",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix",
     "lint:style": "stylelint \"**/*.css\"",
     "lint:ts": "tsc -p tsconfig.json --noEmit --pretty false",
     "start": "ember serve",

@@ -21,7 +21,10 @@ module('Integration | Component | glue-menu-trigger', function(hooks) {
       isOpen: false,
       disabled: false,
       actions: {
-        toggle() {}
+        toggle() {},
+        close() {},
+        open() {},
+        reposition(...args) { args; return undefined; },
       },
     };
 
@@ -45,7 +48,10 @@ module('Integration | Component | glue-menu-trigger', function(hooks) {
       isOpen: false,
       disabled: false,
       actions: {
-        toggle() {}
+        toggle() {},
+        close() {},
+        open() {},
+        reposition(...args) { args; return undefined; },
       },
     };
 

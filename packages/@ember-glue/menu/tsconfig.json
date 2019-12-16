@@ -34,6 +34,9 @@
       "@ember-glue/menu/*": [
         "addon/*"
       ],
+      "ember-basic-dropdown/components/*": [
+        "../../../node_modules/ember-basic-dropdown/addon/components/*"
+      ],
       "@ember-glue/menu/test-support": [
         "addon-test-support"
       ],
