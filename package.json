@@ -5,7 +5,10 @@
   "repository": "https://github.com/gaurav0/ember-glue",
   "license": "MIT",
   "workspaces": [
-    "packages/**/*"
+    "packages/@ember-glue/button",
+    "packages/@ember-glue/menu",
+    "packages/@ember-glue/toggle",
+    "packages/@ember-glue/themes/blue"
   ],
   "scripts": {
     "lint:hbs": "lerna run lint:hbs",
