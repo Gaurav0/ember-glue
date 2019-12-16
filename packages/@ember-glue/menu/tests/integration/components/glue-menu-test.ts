@@ -6,11 +6,30 @@ import hbs from 'htmlbars-inline-precompile';
 module('Integration | Component | glue-menu', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it works as a block element', async function(assert) {
+  test('it renders as a block element', async function(assert) {
     await render(hbs`<GlueMenu title="My Title">My Menu</GlueMenu>`);
 
-    await click('.glue-menu');
+    assert.dom('.glue-menu').containsText('My Menu');
+  });
+
+  test('it shows content only after clicking on trigger', async function(assert) {
+    await render(hbs`
+      <GlueMenu title="My Title" as |menu|>
+        My Menu
+        <menu.Trigger>My Trigger</menu.Trigger>
+        <menu.Content @renderInPlace={{true}}>My Content</menu.Content>
+      </GlueMenu>
+    `);
 
     assert.dom('.glue-menu').containsText('My Menu');
+    assert.dom('.glue-menu--trigger').containsText('My Trigger');
+    assert.dom('.glue-menu--content').isNotVisible;
+
+    await click ('.glue-menu--trigger');
+
+    assert.dom('.glue-menu').containsText('My Menu');
+    assert.dom('.glue-menu--trigger').containsText('My Trigger');
+    assert.dom('.glue-menu--content').isVisible;
+    assert.dom('.glue-menu--content').containsText('My Content');
   });
 });
