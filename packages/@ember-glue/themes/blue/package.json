@@ -13,7 +13,9 @@
   "scripts": {
     "build": "ember build",
     "lint:style": "stylelint \"**/*.css\"",
-    "start": "ember serve"
+    "start": "ember serve",
+    "test": "ember -v",
+    "test:scenario": "ember -v"
   },
   "dependencies": {
     "ember-cli-babel": "^7.11.1",

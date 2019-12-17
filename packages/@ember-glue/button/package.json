@@ -22,6 +22,7 @@
     "lint:ts": "tsc -p tsconfig.json --noEmit --pretty false",
     "start": "ember serve",
     "test": "ember test --test-port=0",
+    "test:scenario": "ember try:one",
     "test:all": "ember try:each",
     "prepublishOnly": "ember ts:precompile",
     "postpublish": "ember ts:clean"

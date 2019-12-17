@@ -16,7 +16,8 @@
     "lint:js:fix": "lerna run lint:js:fix",
     "lint:style": "lerna run lint:style",
     "lint:ts": "lerna run lint:ts",
-    "test": "yarn workspaces run test"
+    "test": "yarn workspaces run test",
+    "test:scenario": "yarn workspaces run test:scenario"
   },
   "devDependencies": {
     "lerna": "^3.19.0"
