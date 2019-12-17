@@ -55,8 +55,8 @@ jobs:
     - env: EMBER_TRY_SCENARIO=ember-beta
     - env: EMBER_TRY_SCENARIO=ember-canary
 
-install:
-  - yarn install --no-lockfile --non-interactive
+    install:
+      - yarn install --no-lockfile --non-interactive
 
-script:
-  - yarn test:scenario -- $EMBER_TRY_SCENARIO
+    script:
+      - yarn test:scenario $EMBER_TRY_SCENARIO

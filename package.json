@@ -1,6 +1,6 @@
 {
   "name": "ember-glue",
-  "private": "true",
+  "private": true,
   "description": "monorepo for ember-glue ui library",
   "repository": "https://github.com/gaurav0/ember-glue",
   "license": "MIT",
