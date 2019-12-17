@@ -45,7 +45,7 @@ jobs:
         - yarn test
 
     - stage: "Additional Tests"
-    - name: "Floating Dependencies"
+      name: "Floating Dependencies"
       script:
         - yarn test
 
