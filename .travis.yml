@@ -26,7 +26,7 @@ branches:
     - /^v\d+\.\d+\.\d+/
 
 jobs:
-  fail_fast: true
+  fast_finish: true
   allow_failures:
     - env: EMBER_TRY_SCENARIO=ember-canary
 
@@ -44,19 +44,19 @@ jobs:
         - yarn lint:style
         - yarn test
 
+    - stage: "Additional Tests"
     - name: "Floating Dependencies"
       script:
         - yarn test
 
     # we recommend new addons test the current and previous LTS
     # as well as latest stable release (bonus points to beta/canary)
-    - stage: "Additional Tests"
     - env: EMBER_TRY_SCENARIO=ember-release
     - env: EMBER_TRY_SCENARIO=ember-beta
     - env: EMBER_TRY_SCENARIO=ember-canary
 
-    install:
-      - yarn install --no-lockfile --non-interactive
+install:
+  - yarn install --no-lockfile --non-interactive
 
-    script:
-      - yarn test:scenario $EMBER_TRY_SCENARIO
+script:
+  - yarn test:scenario $EMBER_TRY_SCENARIO
