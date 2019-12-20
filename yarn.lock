@@ -953,7 +953,7 @@
     unique-filename "^1.1.1"
     which "^1.3.1"
 
-"@glimmer/component@^1.0.0-beta.3":
+"@glimmer/component@^1.0.0", "@glimmer/component@^1.0.0-beta.3":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@glimmer/component/-/component-1.0.0.tgz#f9052c8e99fb7b3d48d27c65891c5f0e59084a82"
   integrity sha512-1ERZYNLZRuC8RYbcfkJeAWn3Ly7W2VdoHLQIHCmhQH/m7ubkNOdLQcTnUzje7OnRUs9EJ6DjfoN57XRX9Ux4rA==
@@ -997,7 +997,7 @@
     handlebars "^4.5.1"
     simple-html-tokenizer "^0.5.8"
 
-"@glimmer/tracking@^1.0.0-beta.3":
+"@glimmer/tracking@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@glimmer/tracking/-/tracking-1.0.0.tgz#aba9feeb47c48d5aadc1226b7e8d19e34031a6bc"
   integrity sha512-OuF04ihYD/Rjvf++Rf7MzJVnawMSax/SZXEj4rlsQoMRwtQafgtkWjlFBcbBNQkJ3rev1zzfNN+3mdD2BFIaNg==
@@ -5479,16 +5479,16 @@ ember-auto-import@^1.3.0:
     webpack "~4.28"
 
 ember-basic-dropdown@^3.0.0-beta.6:
-  version "3.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/ember-basic-dropdown/-/ember-basic-dropdown-3.0.0-beta.6.tgz#c13b5bb8d5d9c3d9988de854d9981fc32144cde1"
-  integrity sha512-rdq1uJddnKRVYx0pmPdYmwAU5ax19p413LQ+N4BvfmfbdX4xT4obWjGda/cq8LyHJymZdqxAmXvRZccOZBzRnw==
+  version "3.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/ember-basic-dropdown/-/ember-basic-dropdown-3.0.0-beta.7.tgz#3a80d49a6638c77a7d76ce829c5eabebd3088652"
+  integrity sha512-1JZIIXsSZ1Ii9oGQJy8EOk/UpqFSTlMH5tO2rEt+WDccpKBAknpAcaJ4uxay85ke+FQbo4MWd5pF/90HlUJXhA==
   dependencies:
     "@ember/render-modifiers" "^1.0.2"
-    "@glimmer/component" "^1.0.0-beta.3"
-    "@glimmer/tracking" "^1.0.0-beta.3"
-    ember-cli-babel "^7.11.0"
-    ember-cli-htmlbars "^4.0.8"
-    ember-cli-typescript "^3.1.1"
+    "@glimmer/component" "^1.0.0"
+    "@glimmer/tracking" "^1.0.0"
+    ember-cli-babel "^7.13.0"
+    ember-cli-htmlbars "^4.2.0"
+    ember-cli-typescript "^3.1.2"
     ember-element-helper "^0.2.0"
     ember-maybe-in-element "^0.4.0"
     ember-truth-helpers "2.1.0"
@@ -5517,7 +5517,7 @@ ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.16.0, ember-cli-babel@^6.6.0, 
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-babel@^7.0.0, ember-cli-babel@^7.1.0, ember-cli-babel@^7.1.2, ember-cli-babel@^7.10.0, ember-cli-babel@^7.11.0, ember-cli-babel@^7.11.1, ember-cli-babel@^7.12.0, ember-cli-babel@^7.13.2, ember-cli-babel@^7.7.3:
+ember-cli-babel@^7.0.0, ember-cli-babel@^7.1.0, ember-cli-babel@^7.1.2, ember-cli-babel@^7.10.0, ember-cli-babel@^7.11.0, ember-cli-babel@^7.11.1, ember-cli-babel@^7.12.0, ember-cli-babel@^7.13.0, ember-cli-babel@^7.13.2, ember-cli-babel@^7.7.3:
   version "7.13.2"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.13.2.tgz#6b6f4d508cc3bb300c5711d3d02c59ba80f0f686"
   integrity sha512-VH2tMXaRFkbQEyVJnxUtAyta5bAKjtcLwJ4lStW/iRk/NIlNFNJh1uOd7uL9H9Vm0f4/xR7Mc0Q7ND9ezKOo+A==
@@ -5582,7 +5582,7 @@ ember-cli-htmlbars-inline-precompile@^2.1.0:
     heimdalljs-logger "^0.1.9"
     silent-error "^1.1.0"
 
-ember-cli-htmlbars@^4.0.0, ember-cli-htmlbars@^4.0.8:
+ember-cli-htmlbars@^4.0.0, ember-cli-htmlbars@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-4.2.0.tgz#a3694ab31f6d571c45786a3041b9c76e4eb30989"
   integrity sha512-YymJLg/rRiclK5jxbTFpaRNlbS+f3SY6SplnMExjcrcbSjMRsBuams50+mppENEu7iKfd6PBqH3FHVbYsukHSQ==
@@ -5724,7 +5724,7 @@ ember-cli-typescript@^2.0.2:
     stagehand "^1.0.0"
     walk-sync "^1.0.0"
 
-ember-cli-typescript@^3.1.1:
+ember-cli-typescript@^3.1.1, ember-cli-typescript@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/ember-cli-typescript/-/ember-cli-typescript-3.1.2.tgz#696454177c3039b711a19fc0669dfc7c2ce81358"
   integrity sha512-J7sC9EL652pEplZRlCzhGoW0T4F6pt29vhEcK4kA397YEootoAZlqTdIhRpR13o8fmTJ8xRWtXEC7KrPPnqamQ==
