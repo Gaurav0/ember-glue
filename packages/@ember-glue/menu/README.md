@@ -1,20 +1,21 @@
-@ember-glue/menu
+@ember-glue/button
 ==============================================================================
 
-Menu components for ember-glue
+Button component for ember-glue
 
 Compatibility
 ------------------------------------------------------------------------------
 
-* Ember.js v2.18 or above
+* Ember.js v3.12 or above
 * Ember CLI v2.13 or above
-* Node.js v8 or above
+* Node.js v10 or above
+
 
 Installation
 ------------------------------------------------------------------------------
 
 ```sh
-ember install @ember-glue/menu
+ember install @ember-glue/button
 ```
 
 Usage
