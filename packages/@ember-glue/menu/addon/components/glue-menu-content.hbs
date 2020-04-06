@@ -1,11 +1,11 @@
-{{#let (component this.args.contentComponent) as |Content|}}
+{{#let (component @contentComponent) as |Content|}}
   <Content
     @renderInPlace={{this.renderInPlace}}
     class="glue-menu--content"
     ...attributes
   >
     {{yield (hash
-      Item=(component "glue-menu-item" close=(action this.close))
+      Item=(component "glue-menu-item" close=this.close)
     )}}
   </Content>
 {{/let}}

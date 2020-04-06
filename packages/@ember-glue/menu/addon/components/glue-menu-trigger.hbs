@@ -1,4 +1,4 @@
-{{#let (component this.args.triggerComponent) as |Trigger|}}
+{{#let (component @triggerComponent) as |Trigger|}}
   <Trigger @htmlTag="button" class="glue-menu--trigger" ...attributes>
     {{#if hasBlock}}
       {{yield @label}}

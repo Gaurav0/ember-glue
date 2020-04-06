@@ -12,12 +12,12 @@ export default class GlueMenuTrigger extends Component<Args> {
     super(owner, args);
   }
 
-  get renderInPlace() {
+  get renderInPlace(): boolean {
     return this.args.renderInPlace || false;
   }
 
   @action
-  close() {
+  close(): void {
     this.args.dropdown.actions.close();
   }
 }
