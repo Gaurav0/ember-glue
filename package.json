@@ -23,7 +23,7 @@
     "lerna": "^3.19.0"
   },
   "resolutions": {
-    "clean-css": "4.2.1",
+    "clean-css": "4.2.3",
     "remark": "11.0.2"
   }
 }
