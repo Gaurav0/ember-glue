@@ -11,8 +11,8 @@ module.exports = {
 
   contentFor(type, config) {
     let emberBasicDropdown = this.addons.find(
-      addon => addon.name === 'ember-basic-dropdown'
+      (addon) => addon.name === 'ember-basic-dropdown'
     );
     return emberBasicDropdown.contentFor(type, config);
-  }
+  },
 };
