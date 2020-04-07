@@ -1,6 +1,6 @@
 {
   "name": "@ember-glue/blue-theme",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Blue theme for ember-glue",
   "keywords": [
     "ember-addon",

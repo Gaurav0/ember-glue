@@ -1,6 +1,6 @@
 {
   "name": "@ember-glue/toggle",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Toggle Button component for ember-glue",
   "keywords": [
     "ember-addon",
