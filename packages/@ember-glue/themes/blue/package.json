@@ -77,7 +77,7 @@
     "qunit-dom": "^1.0.0",
     "stylelint": "^13.3.0",
     "stylelint-config-recommended": "^3.0.0",
-    "typescript": "~3.7.3"
+    "typescript": "~3.8.3"
   },
   "engines": {
     "node": "10.* || >= 12"
