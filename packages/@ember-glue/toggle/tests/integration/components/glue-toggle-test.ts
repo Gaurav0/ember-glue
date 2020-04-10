@@ -6,16 +6,18 @@ import { TestContext } from 'ember-test-helpers';
 
 type Context = TestContext & { handleClick: () => void };
 
-module('Integration | Component | glue-toggle', function(hooks) {
+module('Integration | Component | glue-toggle', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it works inline with label', async function(this: Context, assert) {
+  test('it works inline with label', async function (this: Context, assert) {
     let clickCalled = 0;
-    this.handleClick = () => {
+    this.handleClick = (): void => {
       clickCalled++;
     };
 
-    await render(hbs`<GlueToggle title="My Title" @label="My Toggle" @handleClick={{action this.handleClick}} />`);
+    await render(
+      hbs`<GlueToggle title="My Title" @label="My Toggle" @handleClick={{this.handleClick}} />`
+    );
 
     await click('.glue-toggle');
 
@@ -24,13 +26,15 @@ module('Integration | Component | glue-toggle', function(hooks) {
     assert.equal(clickCalled, 1, 'handleClick was called once');
   });
 
-  test('it works as a block element', async function(this: Context, assert) {
+  test('it works as a block element', async function (this: Context, assert) {
     let clickCalled = 0;
-    this.handleClick = () => {
+    this.handleClick = (): void => {
       clickCalled++;
     };
 
-    await render(hbs`<GlueToggle title="My Title" @handleClick={{action this.handleClick}}>My Toggle</GlueToggle>`);
+    await render(
+      hbs`<GlueToggle title="My Title" @handleClick={{this.handleClick}}>My Toggle</GlueToggle>`
+    );
 
     await click('.glue-toggle');
 

@@ -1,12 +1,14 @@
 import { module, test } from 'qunit';
 import { visit, currentURL, click } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
+import a11yAudit from 'ember-a11y-testing/test-support/audit';
 
-module('Acceptance | application', function(hooks) {
+module('Acceptance | application', function (hooks) {
   setupApplicationTest(hooks);
 
-  test('visiting /', async function(assert) {
+  test('visiting /', async function (assert) {
     await visit('/');
+    await a11yAudit();
 
     assert.equal(currentURL(), '/');
     assert.dom('button.glue-button').exists();

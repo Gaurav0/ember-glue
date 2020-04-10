@@ -5,26 +5,36 @@ import hbs from 'htmlbars-inline-precompile';
 import { TestContext } from 'ember-test-helpers';
 import { Dropdown } from 'ember-basic-dropdown/components/basic-dropdown';
 import { guidFor } from '@ember/object/internals';
+import a11yAudit from 'ember-a11y-testing/test-support/audit';
 
 type Context = TestContext & {
-  contentComponent: any;
+  contentComponent: string;
   dropdown: Dropdown;
 };
 
-module('Integration | Component | glue-menu-content', function(hooks) {
+module('Integration | Component | glue-menu-content', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders as a block element', async function(this: Context, assert) {
+  test('it renders as a block element', async function (this: Context, assert) {
     this.contentComponent = 'basic-dropdown-content';
     this.dropdown = {
       uniqueId: guidFor(this),
       isOpen: true,
       disabled: false,
       actions: {
-        toggle() {},
-        close() {},
-        open() {},
-        reposition(...args) { args; return undefined; },
+        toggle(): void {
+          /* no body */
+        },
+        close(): void {
+          /* no body */
+        },
+        open(): void {
+          /* no body */
+        },
+        reposition(...args): undefined {
+          args;
+          return undefined;
+        },
       },
     };
 
@@ -37,22 +47,32 @@ module('Integration | Component | glue-menu-content', function(hooks) {
         Some Text
       </GlueMenuContent>
     `);
+    await a11yAudit();
 
     assert.dom('.glue-menu--content').containsText('Some Text');
     assert.dom('.glue-menu--content').hasAttribute('title', 'My Title');
   });
 
-  test('it yields the glue-menu-item component', async function(this: Context, assert) {
+  test('it yields the glue-menu-item component', async function (this: Context, assert) {
     this.contentComponent = 'basic-dropdown-content';
     this.dropdown = {
       uniqueId: guidFor(this),
       isOpen: true,
       disabled: false,
       actions: {
-        toggle() {},
-        close() {},
-        open() {},
-        reposition(...args) { args; return undefined; },
+        toggle(): void {
+          /* no body */
+        },
+        close(): void {
+          /* no body */
+        },
+        open(): void {
+          /* no body */
+        },
+        reposition(...args): undefined {
+          args;
+          return undefined;
+        },
       },
     };
 
@@ -68,6 +88,7 @@ module('Integration | Component | glue-menu-content', function(hooks) {
         <mc.Item>Item 2</mc.Item>
       </GlueMenuContent>
     `);
+    await a11yAudit();
 
     assert.dom('.glue-menu--content').containsText('Some Text');
     assert.dom('.glue-menu--content').hasAttribute('title', 'My Title');

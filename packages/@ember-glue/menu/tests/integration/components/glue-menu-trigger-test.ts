@@ -7,24 +7,33 @@ import { Dropdown } from 'ember-basic-dropdown/components/basic-dropdown';
 import { guidFor } from '@ember/object/internals';
 
 type Context = TestContext & {
-  triggerComponent: any;
+  triggerComponent: string;
   dropdown: Dropdown;
 };
 
-module('Integration | Component | glue-menu-trigger', function(hooks) {
+module('Integration | Component | glue-menu-trigger', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it works inline with label', async function(this: Context, assert) {
+  test('it works inline with label', async function (this: Context, assert) {
     this.triggerComponent = 'basic-dropdown-trigger';
     this.dropdown = {
       uniqueId: guidFor(this),
       isOpen: false,
       disabled: false,
       actions: {
-        toggle() {},
-        close() {},
-        open() {},
-        reposition(...args) { args; return undefined; },
+        toggle(): void {
+          /* no body */
+        },
+        close(): void {
+          /* no body */
+        },
+        open(): void {
+          /* no body */
+        },
+        reposition(...args): undefined {
+          args;
+          return undefined;
+        },
       },
     };
 
@@ -41,17 +50,26 @@ module('Integration | Component | glue-menu-trigger', function(hooks) {
     assert.dom('.glue-menu--trigger').hasAttribute('title', 'My Title');
   });
 
-  test('it works as a block element', async function(this: Context, assert) {
+  test('it works as a block element', async function (this: Context, assert) {
     this.triggerComponent = 'basic-dropdown-trigger';
     this.dropdown = {
       uniqueId: guidFor(this),
       isOpen: false,
       disabled: false,
       actions: {
-        toggle() {},
-        close() {},
-        open() {},
-        reposition(...args) { args; return undefined; },
+        toggle(): void {
+          /* no body */
+        },
+        close(): void {
+          /* no body */
+        },
+        open(): void {
+          /* no body */
+        },
+        reposition(...args): undefined {
+          args;
+          return undefined;
+        },
       },
     };
 
