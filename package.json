@@ -22,8 +22,7 @@
     "test:scenario": "yarn workspaces run test:scenario"
   },
   "resolutions": {
-    "clean-css": "4.2.3",
-    "remark": "11.0.2"
+    "clean-css": "4.2.3"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.3.0",
